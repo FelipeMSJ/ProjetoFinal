@@ -1,8 +1,9 @@
+
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>add_dp</title>
+<title>Adicionar Disciplina</title>
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
@@ -42,11 +43,13 @@
 			
 				<label class="col-md-4 control-label"></label>
 				<div class="col-md-4">
-					<button type="submit" class="btn btn-warning" >Adicionar </button>
+				
+					<button type="submit" class="btn btn-warning">Adicionar</button>
+					
 				</div>
 				
 			</div>
-
+			
 		</fieldset>
 		</form>
 	</div>

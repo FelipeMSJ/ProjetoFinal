@@ -1,6 +1,8 @@
 -- Estrutura para tabela `usuarios`
 --
+
 select * from usuarios;
+
 
 CREATE TABLE usuarios (
   id int(11) NOT NULL auto_increment,
