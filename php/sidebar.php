@@ -28,7 +28,7 @@
 					<a href="#">Panda</a>
 				</li>
 				<li>
-					<a href="#"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
+					<a href="../pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
 				</li>
 				<li>
 					<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
