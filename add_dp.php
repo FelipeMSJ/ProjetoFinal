@@ -26,7 +26,6 @@
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/npm.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
 		
 		
 	</head>
