@@ -43,7 +43,7 @@
 									echo ("<li><a href=\"a\">{$linha['materia_nome']}</a></li>");
 								}
 							?>
-						<li class="dropdown-header"><a href="add_dp.php">Adicionar Disciplina</a></li>
+						<li class="dropdown-header"><a href="add_dp.php"><strong>Adicionar Disciplina</strong></a></li>
 					</ul>
 				</li>
 				<li>
