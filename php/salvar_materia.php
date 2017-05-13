@@ -10,6 +10,6 @@
 		$result_nome_materia->execute();
 	$con->commit();
 	
-	$pp = 'pp.php';
+	$pp = '../pp.php';
 	echo("<a href= '$pp'>Matéria adicionada com sucesso, clique para continuar</a>")
 ?>
