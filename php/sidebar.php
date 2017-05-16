@@ -7,7 +7,7 @@
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
-	<script src="js/index.js"></script>
+	<!-- <script src="js/sidebar.js"></script> -->
 	
 </head>
 
@@ -21,7 +21,7 @@
 					<a href="#">Panda</a>
 				</li>
 				<li>
-					<a href="../pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
+					<a href="pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
 				</li>
 				<li>
 					<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
@@ -34,7 +34,7 @@
 								include 'conectardb.php';
 								$consulta = $con->query("SELECT materia_nome FROM usuarios ORDER BY materia_nome ASC");
 								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-									echo ("<li><a href=\"a\">{$linha['materia_nome']}</a></li>");
+									echo ("<li><a href='chat.php'>{$linha['materia_nome']}</a></li>");
 								}
 							?>
 						<li class="dropdown-header"><a href="add_dp.php"><strong>Adicionar Disciplina</strong></a></li>
