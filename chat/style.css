@@ -1,0 +1,97 @@
+body{
+	margin:0;
+	padding:0;
+}
+p {
+color:#cccccc;
+line-height:22px;
+padding: 0 0 10px;
+margin: 20px 0 20px 0;
+}
+
+img {
+border:none;
+}
+
+#container {
+clear: both;
+margin: 0;
+padding: 0;
+}
+
+
+.panel {
+position: absolute;
+top: 50px;
+left: 0;
+display: none;
+background: #000000;
+border:1px solid #111111;
+border-radius:0 20px 20px 0;
+width: 295px;
+height: auto;
+padding: 10px;
+color:#fff;
+}
+
+a.trigger{
+position: absolute;
+text-decoration: none;
+top: 11px; left: -1px;
+font-size: 16px;
+letter-spacing:-1px;
+font-family: verdana, helvetica, arial, sans-serif;
+color:#fff;
+padding: 10px;
+font-weight: 700;
+background:url('rrrrr.png') no-repeat  0 0 #000;
+height: 19px; width: 13px;
+display: block;
+}
+a.active.trigger {
+background:url('rrrrr.png') no-repeat  0 -42px #000;
+}
+
+/*style for the chat form*/
+#chatwrapper{
+	margin:0 auto;
+	width:80%;
+}
+#messages{
+	padding:10px;
+	width:100%;
+	border:1px solid #eeeeee;
+	overflow-y:auto;
+	height:400px;
+	margin: 50px auto;
+}
+#usercolor {
+	float: left;
+	width: 15%;
+}
+#messagesntry {
+	float: left;
+	width: 70%;
+}
+#messagesubmit {
+	float: left;
+	width: 15%;
+}
+#text {
+	padding: 10px 5px;
+	border: 1px solid #EEEEEE;
+}
+#output {
+	width: 748px; height: 80px;
+	border: 1px solid #EEEEEE;
+	padding: 10px 5px;
+}
+#submitmessage {
+	font-size: 18px;
+	border: 1px solid #EEEEEE;
+	background-color: #40F2FF;
+	color: #FFFFFF;
+	padding-left: 10px; padding-right: 10px; height: 80px; width: 184px;
+	cursor: pointer;
+}
+
