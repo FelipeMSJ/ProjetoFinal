@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html>
 	<head>
@@ -19,13 +17,12 @@
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
 		
 		<script type="text/javascript" src="js/javascript.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/npm.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 		
 		
 	</head>
@@ -38,9 +35,35 @@
 		<div id="wrapper">
 			<div class="overlay"></div>
 
-				<!--Sidebar->
-				<?php include('php\sidebar.php') ?>
-				<!--Sidebar->
+				<!-- Sidebar -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+					<ul class="nav sidebar-nav">
+						<li class="sidebar-brand">
+							<a href="#">
+								Panda
+							</a>
+						</li>
+						<li>
+							<a href="pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-book" aria-hidden="true"></i> Disciplinas <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown-header">Lista de Disciplinas</li>
+								
+								<li><a href="#">Desenvolvimento Web</a></li>
+								<li><a href="#">Sistemas Operacionais</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /#sidebar-wrapper -->
 
 				<!-- Page Content -->
 				<div id="page-content-wrapper">
@@ -61,7 +84,7 @@
 								<div class="col-md-4 inputGroupContainer">
 
 									<div class="input-group">
-										<input id="materia" name="materia" placeholder="Nome da Matéria" class="form-control" type="text">
+										<input id="materia_nome" name="materia_nome" placeholder="Nome da Matéria" class="form-control" type="text">
 									</div>
 
 								</div>

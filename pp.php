@@ -1,3 +1,11 @@
+<?php 
+	include("php/conectardb.php");
+
+	$materias = "SELECT id, materia_nome FROM usuarios ORDER BY id ASC";
+	$result_materias = $con->prepare($materias);
+	$result_materias->execute();
+		
+?>
 <!doctype html>
 <html>
 <head>
@@ -16,13 +24,13 @@
 	<!--Sidebar-->
 	
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/javascript.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/npm.js"></script>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/npm.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
@@ -30,12 +38,37 @@
 		
 	</nav>
 	<div id="wrapper">
-			
 			<div class="overlay"></div>
-				<!--Sidebar->
-				<?php include('php\sidebar.php') ?>
-				<!--Sidebar->
-				
+				<!-- Sidebar -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+					<ul class="nav sidebar-nav">
+						<li class="sidebar-brand">
+							<a href="#">
+								Panda
+							</a>
+						</li>
+						<li>
+							<a href="pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-book" aria-hidden="true"></i> Disciplinas <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown-header">Lista de Disciplinas</li>
+								
+								<li><a href="#">Desenvolvimento Web</a></li>
+								<li><a href="#">Sistemas Operacionais</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /#sidebar-wrapper -->
+
 				<!-- Page Content -->
 				<div id="page-content-wrapper">
 					<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
@@ -50,13 +83,33 @@
 							<label class="col-md-4 control-label"></label>
 								<div class="col-md-4">
 								
-									<a href="calendário.php">
-										<button type="submit" class="btn btn-warning">Desenvolvimento Web</button>
-									</a>
+								<?php
+										
+									while($materias_aluno = $result_materias->fetch(PDO::FETCH_ASSOC)): ?>
+										
+										<a href="chat.php">
+											<button type="submit" class="btn btn-warning"><?php echo $materias_aluno['materia_nome'] ?></button>
+										</a>
+
+										<a href="mod_dp.php?id=<?php echo $materias_aluno['id']; ?>">
+											<button type="submit" class="btn btn-warning">Modificar</button>
+										</a>
+										
+										<a href="php/excluir_materia.php?id=<?php echo $materias_aluno['id']; ?>">
+											<button type="submit" class="btn btn-warning">Excluir</button>
+										</a>
+										<br>
+										
+								<?php endwhile;?>						
+										
 									
-									<a href="mod_dp.php">
-										<button type="submit" class="btn btn-warning">Modificar</button>
+									<br>
+									<a href="add_dp.php">
+										<button type="submit" class="btn btn-warning">Adicionar</button>
 									</a>
+									<!--<a href="mod_dp.php?nome_materia">
+										<button type="submit" class="btn btn-warning">Modificar</button>
+									</a>-->
 									
 									
 								</div>

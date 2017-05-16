@@ -1,3 +1,24 @@
+<?php
+	include("php/conectardb.php");
+
+	// pega o ID da URL
+	$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
+
+	//Valida a variavel da URL
+	if (empty($id)){
+		echo "ID para alteração não definido";
+		exit;
+	}
+
+	$sql_msg_contato = "SELECT id, materia_nome FROM usuarios WHERE id='$id'";
+	$result_msg_contato = $con->prepare($sql_msg_contato);
+	$result_msg_contato->bindParam(':id', $id, PDO::PARAM_INT);
+	$result_msg_contato->execute();
+
+	$resultado_msg_contato = $result_msg_contato->fetch(PDO::FETCH_ASSOC);
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -20,7 +41,7 @@
 	
 	<div class="container">
 					
-		<form class="well form-horizontal" action="modificar_materia.php" method="POST" id="contact_form">
+		<form class="well form-horizontal" action="php/modificar_materia.php" method="POST" id="contact_form">
 		<fieldset>
 			
 			<!-- Text input-->
@@ -30,7 +51,7 @@
 				<div class="col-md-4 inputGroupContainer">
 				
 					<div class="input-group">
-						<input id="materia" name="materia" placeholder="Nome da Matéria" class="form-control"  type="text">
+						<input id="materia_nome" name="materia_nome" placeholder="<?php echo $resultado_msg_contato['materia_nome'] ?>" class="form-control"  type="text">
 					</div>
 					
 				</div>
@@ -48,6 +69,8 @@
 				</div>
 				
 			</div>
+			
+			
 			
 		</fieldset>
 		</form>
