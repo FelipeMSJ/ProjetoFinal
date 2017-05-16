@@ -3,6 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<title>Chat</title>
+	
+		<!--Sidebar-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+		
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+		<script src="js/sidebar.js"></script>
+		<!--Sidebar-->
+	
+	
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -68,6 +82,21 @@
 	<nav class="menu">
 		
 	</nav>
+	<div id="wrapper">
+		<div class="overlay"></div>
+		<?php
+			include('php/sidebar.php');
+		?>
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+	</div>
+	<!-- /#wrapper -->
+	
 	<div id="chatwrapper">
 		<!--display-->
 		<!--http://www.youtube.com/watch?v=FyXeOX-uYMc-->

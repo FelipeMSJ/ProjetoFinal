@@ -24,13 +24,13 @@
 	<!--Sidebar-->
 	
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
 		
-		<script type="text/javascript" src="js/javascript.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/npm.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/npm.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
