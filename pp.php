@@ -39,36 +39,9 @@
 	</nav>
 	<div id="wrapper">
 			<div class="overlay"></div>
-				<!-- Sidebar -->
-				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-					<ul class="nav sidebar-nav">
-						<li class="sidebar-brand">
-							<a href="#">
-								Panda
-							</a>
-						</li>
-						<li>
-							<a href="pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-book" aria-hidden="true"></i> Disciplinas <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li class="dropdown-header">Lista de Disciplinas</li>
-								
-								<li><a href="#">Desenvolvimento Web</a></li>
-								<li><a href="#">Sistemas Operacionais</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
-						</li>
-					</ul>
-				</nav>
-				<!-- /#sidebar-wrapper -->
-
+				<?php
+					include('php/sidebar.php');
+				?>
 				<!-- Page Content -->
 				<div id="page-content-wrapper">
 					<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
