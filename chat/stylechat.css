@@ -70,7 +70,7 @@ background:url('rrrrr.png') no-repeat  0 -42px #000;
 }
 #usercolor {
 	float: left;
-	width: 15%;
+	width: 10%;
 }
 #messagesntry {
 	float: left;
@@ -94,7 +94,18 @@ background:url('rrrrr.png') no-repeat  0 -42px #000;
 	border: 1px solid #EEEEEE;
 	background-color: #333333;
 	color: #FFFFFF;
-	padding-left: 10px; padding-right: 10px; height: 80px; width: 184px;
+	padding-left: 10px; padding-right: 10px; height: 60px; width: 80px;
 	cursor: pointer;
 }
 
+#espacousuario{
+	background-color: #b3b3b3;
+	padding:10px;
+	border:1px solid #eeeeee;
+	overflow-y:auto;
+	height: 120px;
+	margin: 2px auto;
+	width:100%;
+	
+	float: left;
+}

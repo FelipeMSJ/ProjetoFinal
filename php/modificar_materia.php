@@ -4,10 +4,14 @@
 	
 	//Recebe a matéria escrita pelo usuário
 	$nome_materia = $_POST['materia_nome'];
-	$id = $_GET['id'];
+	$id = $_POST['id'];
+
+	if(empty($nome_materia)){
+		echo("Campo vazio, volte e preencha para poder modificar");
+		exit();
+	}
 
 	//Modifica o valor descrito ao banco de dados
-	
 	$mod_materia = "UPDATE usuarios SET materia_nome = :materia_nome WHERE usuarios.id = :id";
 	$result_mod_materia = $con->prepare($mod_materia);
 	$result_mod_materia->bindParam(':materia_nome', $nome_materia, PDO::PARAM_STR);

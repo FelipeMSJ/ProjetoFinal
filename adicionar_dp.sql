@@ -1,6 +1,8 @@
 -- Estrutura para tabela `usuarios`
 --
 
+
+
 select * from usuarios;
 
 

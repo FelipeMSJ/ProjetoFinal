@@ -8,3 +8,4 @@ $q = $db->prepare($sql);
 $q->execute(array(':sas'=>$user,':asas'=>$message,':asafs'=>$text));
 
 echo '<div style="color:'.$text.'">'.$user .' : '. $message.'</div>';
+?>

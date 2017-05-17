@@ -35,7 +35,10 @@
 
 <body>
 	<nav class="menu">
-		
+		<div align="center">
+			<br>
+			<h1 align="center">Página Principal</h1>
+		</div>
 	</nav>
 	<div id="wrapper">
 			<div class="overlay"></div>
