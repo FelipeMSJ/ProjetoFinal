@@ -98,7 +98,11 @@
 							
 						</div>
 						
+<<<<<<< HEAD
 						<input type="hidden" name="id" value="<?php echo $resultado_msg_contato['id']; ?>">
+=======
+						
+>>>>>>> origin/master
 						
 					</fieldset>
 					</form>
