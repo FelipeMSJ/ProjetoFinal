@@ -1,7 +1,3 @@
-<?php
-	include 'conectardb.php';
-	$consulta = $con->query("SELECT materia_nome FROM usuarios ORDER BY materia_nome ASC");
-?>
 <!DOCTYPE html>
 <html >
 <head>
@@ -35,18 +31,13 @@
 					<ul class="dropdown-menu" role="menu">
 						<li class="dropdown-header">Lista de Disciplinas</li>
 							<?php
-<<<<<<< HEAD
-								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)): ?>
-									<li><a href='chat.php'><?php echo $linha['materia_nome']?></a></li>
-							<?php endwhile; ?>
-=======
 								include 'conectardb.php';
 								$consulta = $con->query("SELECT materia_nome FROM usuarios ORDER BY materia_nome ASC");
 								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 									echo ("<li><a href='chat.php'>{$linha['materia_nome']}</a></li>");
 								}
 							?>
->>>>>>> origin/master
+							
 						<li class="dropdown-header"><a href="add_dp.php"><strong>Adicionar Disciplina</strong></a></li>
 					</ul>
 				</li>
