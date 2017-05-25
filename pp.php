@@ -76,9 +76,8 @@
 										</a>
 										<br>
 										
-								<?php endwhile;?>						
-										
-									
+								<?php endwhile;?>
+								
 									<br>
 									<a href="add_dp.php">
 										<button type="submit" class="btn btn-warning">Adicionar</button>
@@ -86,7 +85,6 @@
 									<!--<a href="mod_dp.php?nome_materia">
 										<button type="submit" class="btn btn-warning">Modificar</button>
 									</a>-->
-									
 									
 								</div>
 							
