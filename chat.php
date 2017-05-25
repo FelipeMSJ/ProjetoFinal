@@ -3,11 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Chat</title>
-<<<<<<< HEAD
-		
-=======
 	
->>>>>>> origin/master
 		<!--Sidebar-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
@@ -19,11 +15,7 @@
 
 		<script src="js/sidebar.js"></script>
 		<!--Sidebar-->
-	
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/master
+		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -91,10 +83,6 @@
 			<h1 align="center">Chat</h1>
 		</div>
 	</nav>
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
 	<div id="wrapper">
 		<div class="overlay"></div>
 		<?php
