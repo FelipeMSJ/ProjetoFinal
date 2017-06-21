@@ -1,3 +1,8 @@
+<?php
+	include('php/config.php');
+	include('php/session.php');
+?>
+
 <!doctype html>
 <html>
 	<head>

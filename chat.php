@@ -1,3 +1,9 @@
+<?php 
+include("php/config.php");
+include('php/session.php');
+
+$userDetails=$userClass->userDetails($session_uid);
+?>
 <!doctype html>
 <html>
 <head>
@@ -108,7 +114,7 @@
 				<div id="messagesntry"> <textarea id="output" name="messages" placeholder="Message" > </textarea> </div>
 				<div id="messagesubmit"> <input type="submit" value="Enviar" id="submitmessage" /> </div>
 				<div id="usercolor">
-					<input type="text" name="user" placeholder="User" required="required" value="usuario" id="text" style="margin-bottom: 5px;" /> 
+					<input type="text" name="user" placeholder="User" required="required" value="<?php echo $userDetails->username; ?>" id="text" style="margin-bottom: 5px;" /> 
 					<input name="text" class="color" id="text" maxlength="6" value="000000" />
 				</div>
 			

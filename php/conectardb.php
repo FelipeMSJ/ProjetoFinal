@@ -1,7 +1,7 @@
 <?php 
 	$host = 'localhost';
 	$login = 'root';
-	$db = 'adicionar_dp';
+	$db = 'projetofinalweb';
 	$senha = '';
 			
 	//Criar a conexão

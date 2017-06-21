@@ -1,5 +1,8 @@
 <?php
-include('connect.php');
+include("../php/config.php");
+include('../php/session.php');
+
+$db = getDB();
 $text = '#'.$_POST['text'];
 $message = $_POST['messages'];
 $user = $_POST['user'];

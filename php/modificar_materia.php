@@ -1,6 +1,9 @@
 <?php
 	//Conectar ao banco de dados
-	include("conectardb.php");
+	include('config.php');
+	include('session.php');
+	
+	$db = getDB();
 	
 	//Recebe a matéria escrita pelo usuário
 	$nome_materia = $_POST['materia_nome'];
@@ -12,8 +15,8 @@
 	}
 
 	//Modifica o valor descrito ao banco de dados
-	$mod_materia = "UPDATE usuarios SET materia_nome = :materia_nome WHERE usuarios.id = :id";
-	$result_mod_materia = $con->prepare($mod_materia);
+	$mod_materia = "UPDATE materias SET materia_nome = :materia_nome WHERE materias.id = :id";
+	$result_mod_materia = $db->prepare($mod_materia);
 	$result_mod_materia->bindParam(':materia_nome', $nome_materia, PDO::PARAM_STR);
 	$result_mod_materia->bindParam(':id', $id, PDO::PARAM_INT);
 	if($result_mod_materia->execute()){

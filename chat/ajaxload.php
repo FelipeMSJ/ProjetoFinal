@@ -1,5 +1,8 @@
 <?php
-include('connect.php');
+include("../php/config.php");
+include('../php/session.php');
+
+$db = getDB();
 $id=$_GET['id'];
 $result = $db->prepare("SELECT * FROM messages ORDER BY id ASC");
 $result->execute();

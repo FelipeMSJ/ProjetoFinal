@@ -1,3 +1,7 @@
+<?php
+$userDetails=$userClass->userDetails($session_uid);
+?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -18,7 +22,7 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
 			<ul class="nav sidebar-nav">
 				<li class="sidebar-brand">
-					<a href="#">Panda</a>
+					<a href="#"><?php echo $userDetails->username; ?></a>
 				</li>
 				<li>
 					<a href="pp.php"><i class="fa fa-fw fa-home"></i> Página Inicial</a>
@@ -31,8 +35,8 @@
 					<ul class="dropdown-menu" role="menu">
 						<li class="dropdown-header">Lista de Disciplinas</li>
 							<?php
-								include 'conectardb.php';
-								$consulta = $con->query("SELECT materia_nome FROM usuarios ORDER BY materia_nome ASC");
+								$db = getDB();
+								$consulta = $db->query("SELECT materia_nome FROM materias ORDER BY materia_nome ASC");
 								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 									echo ("<li><a href='chat.php'>{$linha['materia_nome']}</a></li>");
 								}
@@ -42,7 +46,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+					<a href="Logout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
 				</li>
 			</ul>
 		</nav>

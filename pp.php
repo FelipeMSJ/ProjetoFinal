@@ -1,11 +1,14 @@
-<?php 
-	include("php/conectardb.php");
-
-	$materias = "SELECT id, materia_nome FROM usuarios ORDER BY id ASC";
-	$result_materias = $con->prepare($materias);
+<?php
+	include('php/config.php');
+	include('php/session.php');
+	
+	$db = getDB();
+	$materias = "SELECT id, materia_nome FROM materias ORDER BY id ASC";
+	$result_materias = $db->prepare($materias);
 	$result_materias->execute();
 		
 ?>
+
 <!doctype html>
 <html>
 <head>
