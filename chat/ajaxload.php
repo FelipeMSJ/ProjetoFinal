@@ -1,9 +1,16 @@
 <?php
+<<<<<<< HEAD
 include('../php/conectardb.php');
 include('../php/session.php');
 
 $con = getDB();
 
+=======
+include("../php/config.php");
+include('../php/session.php');
+
+$db = getDB();
+>>>>>>> origin/master
 $id=$_GET['id'];
 
 $result = $con->prepare("SELECT * FROM chat ORDER BY id ASC");

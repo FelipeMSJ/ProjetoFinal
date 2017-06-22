@@ -1,4 +1,5 @@
 <?php 
+<<<<<<< HEAD
 	session_start();
 
 	/* DATABASE CONFIGURATION */
@@ -23,4 +24,13 @@
 			echo 'Conecção com o Banco de Dados falhou: ' . $e->getMessage();
 		}
 	}
+=======
+	$host = 'localhost';
+	$login = 'root';
+	$db = 'projetofinalweb';
+	$senha = '';
+			
+	//Criar a conexão
+	$con = new PDO("mysql:host=$host; dbname=$db",$login, $senha, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+>>>>>>> origin/master
 ?>

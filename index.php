@@ -1,13 +1,23 @@
 <?php 
+<<<<<<< HEAD
 include_once("php/conectardb.php");
 include_once('php/class/userClass.php');
 
+=======
+include("php/config.php");
+include('php/class/userClass.php');
+>>>>>>> origin/master
 $userClass = new userClass();
 
 $errorMsgReg='';
 $errorMsgLogin='';
+<<<<<<< HEAD
 
 if (!empty($_POST['loginSubmit'])) {
+=======
+if (!empty($_POST['loginSubmit'])) 
+{
+>>>>>>> origin/master
 $email=$_POST['email'];
 $password=$_POST['password'];
  if(strlen(trim($email))>1 && strlen(trim($password))>1 )
@@ -15,7 +25,11 @@ $password=$_POST['password'];
     $uid=$userClass->userLogin($email,$password);
     if($uid)
     {
+<<<<<<< HEAD
         $url='pp.php';
+=======
+        $url=BASE_URL.'pp.php';
+>>>>>>> origin/master
         header("Location: $url");
     }
     else
@@ -25,7 +39,12 @@ $password=$_POST['password'];
    }
 }
 
+<<<<<<< HEAD
 if (!empty($_POST['signupSubmit'])) {
+=======
+if (!empty($_POST['signupSubmit'])) 
+{
+>>>>>>> origin/master
 
 	$username=$_POST['usernameReg'];
 	$email=$_POST['emailReg'];
@@ -34,6 +53,7 @@ if (!empty($_POST['signupSubmit'])) {
 	$email_check = preg_match('~^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.([a-zA-Z]{2,4})$~i', $email);
 	$password_check = preg_match('~^[A-Za-z0-9!@#$%^&*()_]{6,20}$~i', $password);
 
+<<<<<<< HEAD
 	if($username_check && $email_check && $password_check > 0) {
     $uid=$userClass->userRegistration($username,$password,$email);
 		if($uid){
@@ -46,18 +66,46 @@ if (!empty($_POST['signupSubmit'])) {
     }
 
 }
+=======
+	if($username_check && $email_check && $password_check > 0) 
+	{
+    $uid=$userClass->userRegistration($username,$password,$email,$name);
+    if($uid)
+    {
+    	$url=BASE_URL.'pp.php';
+    	header("Location: $url");
+    }
+    else
+    {
+      $errorMsgReg="Username or Email already exits.";
+    }
+    
+	}
+
+
+}
+
+>>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
 <html >
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <title>Cadastro/Login</title>
+=======
+  <title>Sign-Up/Login Form</title>
+>>>>>>> origin/master
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   
+<<<<<<< HEAD
       <link rel="stylesheet" href="css/style_login.css">
+=======
+      <link rel="stylesheet" href="css/style2.css">
+>>>>>>> origin/master
 
   
 </head>
@@ -134,7 +182,11 @@ if (!empty($_POST['signupSubmit'])) {
 </div> <!-- /form -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+<<<<<<< HEAD
     <script src="js/index_login.js"></script>
+=======
+    <script src="js/index2.js"></script>
+>>>>>>> origin/master
 
 </body>
 </html>

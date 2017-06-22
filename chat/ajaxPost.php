@@ -1,7 +1,14 @@
 <?php
+<<<<<<< HEAD
 include('../php/conectardb.php');
 include('../php/session.php');
 
+=======
+include("../php/config.php");
+include('../php/session.php');
+
+$db = getDB();
+>>>>>>> origin/master
 $text = '#'.$_POST['text'];
 $message = $_POST['messages'];
 $user = $_POST['user'];

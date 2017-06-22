@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 	include('php/conectardb.php');
+=======
+	include('php/config.php');
+>>>>>>> origin/master
 	include('php/session.php');
 ?>
 

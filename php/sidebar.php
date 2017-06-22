@@ -1,9 +1,14 @@
 <?php
+<<<<<<< HEAD
 	$con = getDB();
 	$consulta = $con->query("SELECT materia_nome FROM materias ORDER BY materia_nome ASC");
 	
 	$userDetails=$userClass->userDetails($session_uid);
+=======
+$userDetails=$userClass->userDetails($session_uid);
+>>>>>>> origin/master
 ?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -37,14 +42,28 @@
 					<ul class="dropdown-menu" role="menu">
 						<li class="dropdown-header">Lista de Disciplinas</li>
 							<?php
+<<<<<<< HEAD
 								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)): ?>
 									<li><a href='chat.php'><?php echo $linha['materia_nome']?></a></li>
 							<?php endwhile; ?>
+=======
+								$db = getDB();
+								$consulta = $db->query("SELECT materia_nome FROM materias ORDER BY materia_nome ASC");
+								while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+									echo ("<li><a href='chat.php'>{$linha['materia_nome']}</a></li>");
+								}
+							?>
+							
+>>>>>>> origin/master
 						<li class="dropdown-header"><a href="add_dp.php"><strong>Adicionar Disciplina</strong></a></li>
 					</ul>
 				</li>
 				<li>
+<<<<<<< HEAD
 					<a href="logout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+=======
+					<a href="Logout.php"><i class="fa fa-power-off" aria-hidden="true"></i> Sair</a>
+>>>>>>> origin/master
 				</li>
 			</ul>
 		</nav>

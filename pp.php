@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 	include("php/conectardb.php");
 	include_once('php/session.php');
@@ -5,9 +6,19 @@
 	$con = getDB();
 	$materias = "SELECT id, materia_nome FROM materias ORDER BY id ASC";
 	$result_materias = $con->prepare($materias);
+=======
+<?php
+	include('php/config.php');
+	include('php/session.php');
+	
+	$db = getDB();
+	$materias = "SELECT id, materia_nome FROM materias ORDER BY id ASC";
+	$result_materias = $db->prepare($materias);
+>>>>>>> origin/master
 	$result_materias->execute();
 		
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -78,9 +89,8 @@
 										</a>
 										<br>
 										
-								<?php endwhile;?>						
-										
-									
+								<?php endwhile;?>
+								
 									<br>
 									<a href="add_dp.php">
 										<button type="submit" class="btn btn-warning">Adicionar</button>
@@ -88,7 +98,6 @@
 									<!--<a href="mod_dp.php?nome_materia">
 										<button type="submit" class="btn btn-warning">Modificar</button>
 									</a>-->
-									
 									
 								</div>
 							

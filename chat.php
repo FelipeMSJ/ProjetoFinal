@@ -1,16 +1,28 @@
 <?php 
+<<<<<<< HEAD
 	include("php/conectardb.php");
 	include('php/session.php');
 	$userDetails=$userClass->userDetails($session_uid);
 ?>
 
 
+=======
+include("php/config.php");
+include('php/session.php');
+
+$userDetails=$userClass->userDetails($session_uid);
+?>
+>>>>>>> origin/master
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Chat</title>
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> origin/master
 		<!--Sidebar-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
@@ -22,7 +34,11 @@
 
 		<script src="js/sidebar.js"></script>
 		<!--Sidebar-->
+<<<<<<< HEAD
 	
+=======
+		
+>>>>>>> origin/master
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -122,7 +138,10 @@
 				<h1 id="texto" align="center">Chat</h1>
 			</div>
 	</nav>
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 	<div id="wrapper">
 		<div class="overlay"></div>
 		<?php
@@ -148,7 +167,7 @@
 				<div id="messagesntry"> <textarea id="output" name="messages" placeholder="Message" > </textarea> </div>
 				<div id="messagesubmit"> <input type="submit" value="Enviar" id="submitmessage" /> </div>
 				<div id="usercolor">
-					<input type="text" name="user" placeholder="User" required="required" value="usuario" id="text" style="margin-bottom: 5px;" /> 
+					<input type="text" name="user" placeholder="User" required="required" value="<?php echo $userDetails->username; ?>" id="text" style="margin-bottom: 5px;" /> 
 					<input name="text" class="color" id="text" maxlength="6" value="000000" />
 				</div>
 			</div>
