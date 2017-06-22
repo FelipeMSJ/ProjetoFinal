@@ -1,7 +1,9 @@
 <?php 
 	include("php/conectardb.php");
+	include_once('php/session.php');
 
-	$materias = "SELECT id, materia_nome FROM usuarios ORDER BY id ASC";
+	$con = getDB();
+	$materias = "SELECT id, materia_nome FROM materias ORDER BY id ASC";
 	$result_materias = $con->prepare($materias);
 	$result_materias->execute();
 		
@@ -24,13 +26,13 @@
 	<!--Sidebar-->
 	
 	<link href="css/estilo.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
 		
-	<script type="text/javascript" src="js/javascript.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/npm.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/npm.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
@@ -52,7 +54,7 @@
 						<span class="hamb-middle"></span>
 						<span class="hamb-bottom"></span>
 					</button>
-					<div class="container">
+					<div align="center" class="container">
 									
 						<div class="well form-horizontal" id="contact_form">
 							<fieldset>
@@ -63,7 +65,7 @@
 										
 									while($materias_aluno = $result_materias->fetch(PDO::FETCH_ASSOC)): ?>
 										
-										<a href="chat.php">
+										<a href="calendario.php">
 											<button type="submit" class="btn btn-warning"><?php echo $materias_aluno['materia_nome'] ?></button>
 										</a>
 

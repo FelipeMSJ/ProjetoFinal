@@ -1,3 +1,8 @@
+<?php
+	include('php/conectardb.php');
+	include('php/session.php');
+?>
+
 <!doctype html>
 <html>
 	<head>

@@ -1,6 +1,8 @@
 <?php
 	include("php/conectardb.php");
+	include('php/session.php');
 
+	$con = getDB();
 	// pega o ID da URL
 	$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
@@ -10,7 +12,7 @@
 		exit;
 	}
 
-	$sql_msg_contato = "SELECT id, materia_nome FROM usuarios WHERE id='$id'";
+	$sql_msg_contato = "SELECT id, materia_nome FROM materias WHERE id='$id'";
 	$result_msg_contato = $con->prepare($sql_msg_contato);
 	$result_msg_contato->bindParam(':id', $id, PDO::PARAM_INT);
 	$result_msg_contato->execute();
@@ -98,11 +100,7 @@
 							
 						</div>
 						
-<<<<<<< HEAD
 						<input type="hidden" name="id" value="<?php echo $resultado_msg_contato['id']; ?>">
-=======
-						
->>>>>>> origin/master
 						
 					</fieldset>
 					</form>

@@ -1,12 +1,8 @@
--- Estrutura para tabela `usuarios`
---
+
+select * from materias;
 
 
-
-select * from usuarios;
-
-
-CREATE TABLE usuarios (
+CREATE TABLE materias (
   id int(11) NOT NULL auto_increment,
   materia_nome varchar(220) NOT NULL,
   primary key (id)
