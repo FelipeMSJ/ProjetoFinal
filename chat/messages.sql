@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `messages`
 --
 
-CREATE TABLE IF NOT EXISTS `messages` (
+CREATE TABLE IF NOT EXISTS chat (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(235) NOT NULL,
   `message` varchar(255) NOT NULL,
